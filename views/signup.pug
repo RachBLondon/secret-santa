@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  form#signup-form(action='/sign-up' method='post')
+    label(for='name') Name
+    select(name='name', id='name')
+      each val in players
+          option=val
+    label(for='address') Address
+    input#address(type='text' name='address')
+    label(for='phone-number') Phone Number
+    input#phone-number(type='tel' name='phone-number')
+    button(type='submit' form='signup-form' value='Submit') Submit

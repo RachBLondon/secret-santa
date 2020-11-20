@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form#secret-form(action='/check-secret' method='post')
+    label(for='secret') Type the secret code to get access
+    input#secret(type='text' name='secret')
+    button(type='submit' form='secret-form' value='Submit') Submit
+    if secretError
+      h2.red Something went wrong try again
