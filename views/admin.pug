@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Admin Console
+      if !verified
+        p loading
+        a(class='button', href='/admin') Verify your identity
+      if verified
+        p admin stuff
+    

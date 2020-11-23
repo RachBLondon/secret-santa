@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  form#signup-form(action='/sign-up' method='post')
+  form#signup-form(action='/submit' method='post')
     label(for='name') Name
     select(name='name', id='name')
       each val in players
